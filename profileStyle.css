@@ -1,0 +1,12 @@
+main .container{
+    display: grid;
+    grid-template-columns: 18vw auto;
+    column-gap: 2rem;
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    main .container{
+        grid-template-columns: auto auto;
+    }
+}
