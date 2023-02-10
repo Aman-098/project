@@ -42,3 +42,45 @@ messageNoitification.addEventListener('click', () => {
         messages.style.boxshadow='none';
     },2000);
 })
+
+
+// ==================== popup ===================
+
+
+function changePillContent(x){
+    let val = x;
+    console.log(val);
+    console.log(x);
+    // Get pill
+    let pilltab1 = document.getElementById('ex3-pills-1');
+    let pilltab2 = document.getElementById('ex3-pills-2');
+    let pilltab3 = document.getElementById('ex3-pills-3');
+
+    //Get button
+    let button1 = document.getElementById('button-1');
+    let button2 = document.getElementById('button-2');
+    let button3 = document.getElementById('button-3');
+
+    pilltab1.classList.remove("active");
+    pilltab2.classList.remove("active");
+    pilltab3.classList.remove("active");
+
+    button1.classList.remove("button-active");
+    button2.classList.remove("button-active");
+    button3.classList.remove("button-active");
+    
+    if(x == 1){
+        pilltab1.classList.add("active");
+        button1.classList.add("button-active");
+    }
+    
+    if(x == 2){
+        pilltab2.classList.add("active");
+        button2.classList.add("button-active");
+    }
+    
+    if(x == 3){
+        pilltab3.classList.add("active");
+        button3.classList.add("button-active");
+    }
+}
