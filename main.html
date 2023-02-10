@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mysocial</title>
+
     <!-- iconscout cdn -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- css -->
     <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
@@ -22,13 +24,72 @@
                 <i class="uil uil-search"></i>
                 <input type="search" placeholder="search">
             </div>
+
+            <!--============== Popup Button ===============-->
             <div class="create">
-                <label class="btn btn-primary" for="create-post">Create</label>
-                <div class="profile-photo">
-                   <a href="profile.html"><img src="images/profile-1.jpg" alt="" srcset=""></a>
+                <div class="create">
+                    <div class="box btn btn-primary">
+                        <a class="button" href="#popup1" style="color: white;">Create</a>
+                    </div>
+                    <!--============== Popup starts here ===============-->
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <p><a class="close" href="#">&times;</a></p>
+                            <br>
+                            <!-- Pills navs -->
+                            <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                                <li onclick="changePillContent(1)" class="nav-item" role="presentation">
+                                    <button class="button-style-manual button-active" id="button-1">Article</button>
+                                </li>
+                                <li onclick="changePillContent(2)" class="nav-item" role="presentation">
+                                    <button class="button-style-manual" id="button-2">Question</button>
+                                </li>
+                                <li onclick="changePillContent(3)" class="nav-item" role="presentation">
+                                    <button class="button-style-manual" id="button-3">Feed</button>
+                                </li>
+                            </ul>
+                            <!-- Pills navs -->
+
+                            <!-- Pills content -->
+                            <div class="tab-content" id="ex2-content">
+                                <div class="tab-pane fade show active" id="ex3-pills-1" role="tabpanel"
+                                    aria-labelledby="ex3-tab-1">
+                                    <div class="articelForm">
+                                        <form action="#">
+                                            <div class="titleAndSubmit">
+                                                <div class="title">
+                                                    <label for="title" class="form-label">Title</label> <br>
+                                                    <input type="text" class="form-control" id="titleInput" placeholder="Title...">
+                                                </div>
+                                                <div class="submit">
+                                                    <button type="submit" id="submitButton">submit</button>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Body</label> <br>
+                                                <textarea class="form-control" id="inputBody" rows="10" cols="70" placeholder="Main Body Here..."></textarea>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                    Tab 2 content
+                                </div>
+                                <div class="tab-pane fade" id="ex3-pills-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                                    Tab 3 content
+                                </div>
+                            </div>
+                            <!-- Pills content -->
+                        </div>
+                    </div>
+                    <!--============== Popup ends here ====================-->
+                    <div class="profile-photo">
+                        <a href="profile.html"><img src="images/profile-1.jpg" alt="" srcset=""></a>
+                    </div>
                 </div>
+
             </div>
-        </div>
     </nav>
 
     <!-- ----------------------------MAIN------------------------------------------ -->
@@ -577,25 +638,25 @@
                 <h4>Font Size</h4>
                 <div>
                     <h6>Aa</h6>
-                <div class="choose-size">
-                    <span class="font-size-1"></span>
-                    <span class="font-size-2 active"></span>
-                    <span class="font-size-3"></span>
-                    <span class="font-size-4"></span>
-                    <span class="font-size-5"></span>
-                </div>
-                <h3>Aa</h3>
+                    <div class="choose-size">
+                        <span class="font-size-1"></span>
+                        <span class="font-size-2 active"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-5"></span>
+                    </div>
+                    <h3>Aa</h3>
                 </div>
             </div>
             <!-- ===========primary colors -->
             <div class="color">
                 <h4>Color</h4>
                 <div class="choose-color">
-                <span class="color-1 active"></span>
-                <span class="color-2 "></span>
-                <span class="color-3 "></span>
-                <span class="color-4 "></span>
-                <span class="color-5 "></span>
+                    <span class="color-1 active"></span>
+                    <span class="color-2 "></span>
+                    <span class="color-3 "></span>
+                    <span class="color-4 "></span>
+                    <span class="color-5 "></span>
                 </div>
             </div>
 
@@ -609,7 +670,7 @@
                     </div>
                     <div class="bg-2">
                         <span></span>
-                        <h5 >Dim</h5>
+                        <h5>Dim</h5>
                     </div>
                     <div class="bg-3">
                         <span></span>
@@ -621,7 +682,11 @@
     </div>
 
 
-<script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
